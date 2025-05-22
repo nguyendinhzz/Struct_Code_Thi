@@ -15,8 +15,9 @@ async function main() {
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(morgan("dev"));
-  app.use('/css', express.static(path.join(__dirname, 'public/css')));
-  app.use('/js', express.static(path.join(__dirname, 'public/js')));
+    // app.use('/css', express.static(path.join(__dirname, 'public/css')));
+    // app.use('/js', express.static(path.join(__dirname, 'public/js')));
+  app.use(express.static(path.join(__dirname, 'public')));
 
   const options = {
     definition: {
