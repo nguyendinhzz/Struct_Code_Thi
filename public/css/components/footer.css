@@ -1,0 +1,28 @@
+.footer {
+  width: 100%;
+  background: var(--background-secondary);
+  padding: 16px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-size: 0.8rem;
+  color: var(--color-text, #555);
+}
+
+.footer-text {
+  margin: 0;
+  color: inherit;
+}
+
+.footer-text a {
+  color: var(--color-primary);
+  text-decoration: none;
+  /* font-weight: 500; */
+  transition: color 0.2s;
+}
+
+.footer-text a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}

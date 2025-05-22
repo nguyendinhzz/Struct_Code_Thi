@@ -1,0 +1,61 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #4fd1c5;
+  --color-primary-light: #81e6dd;
+  --color-primary-dark: #3aafa4;
+  --color-primary-bg: #e6f7f5;
+
+  /* Neutral Colors */
+  --background-primary: #ffffff;
+  --background-secondary: #f7fafc;
+  --color-text: #1a202c;
+  --color-text-secondary: #718096;
+  --color-border: #e2e8f0;
+  --color-background-light: #f7fafc;
+
+  /* Accent Colors */
+  --color-warning: #f6ad55;
+  --color-danger: #f56565;
+  --color-success: #48bb78;
+  --color-info: #4299e1;
+
+  /* Interaction States */
+  --color-primary-hover: #3aafa4;
+  --color-primary-active: #2c8b82;
+  --color-disabled: #cbd5e0;
+  --color-disabled-bg: #edf2f7;
+
+  /* Sizes (giữ nguyên từ bạn) */
+  --sidebar-width: 180px;
+  --icon-size: 24px;
+  --font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--background-primary);
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    padding-left: 5px;
+  }
+}
