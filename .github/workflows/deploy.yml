@@ -20,6 +20,6 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            cd /path/to/your/app
+            cd /home/docker-node-mysql/tmp
             docker-compose down
             docker-compose up -d
