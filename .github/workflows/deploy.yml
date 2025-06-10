@@ -2,8 +2,7 @@ name: Auto Deploy on tmp Push
 
 on:
   push:
-    paths:
-      - 'tmp/**'
+    branches: [ master ]
 
 jobs:
   deploy:
