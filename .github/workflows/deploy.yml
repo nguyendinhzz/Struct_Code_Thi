@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: docker_username    # Moved environment field here
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
