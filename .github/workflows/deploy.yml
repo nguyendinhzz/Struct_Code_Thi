@@ -11,19 +11,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Setup SSH Keys
-        run: |
-          mkdir -p ~/.ssh/
-          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/private_key
-          chmod 600 ~/.ssh/private_key
-          
+        
       - name: SSH and Deploy
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.IP_VPS }}
           username: ${{ secrets.VPS_NAME }}
-          key_path: ~/.ssh/private_key
+          key: ${{ secrets.VPS_SSH_KEY }}  # Changed from key_path to key
           port: ${{ secrets.VPS_PORT }}
           script: |
             cd /home/docker-node-mysql
